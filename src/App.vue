@@ -44,10 +44,11 @@ export default {
     addTodo(newTodo) {
       const { title, completed } = newTodo;
       axios
+      
         // We're using axios here to make a POST api request to the URl. It will return a JSON file with a list of TODOS
         .post("https://jsonplaceholder.typicode.com/todos", {
           title,
-          completed
+          completed  // We only need to return the title and the default completed value as JSONPlaceHold will generate an ID for us
         })
 
         // We will join the existing todos we have here to the new todos
